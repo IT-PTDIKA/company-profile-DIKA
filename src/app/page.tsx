@@ -15,8 +15,8 @@ import CollectionnOutsourcing from "../assets/image/CollectionOutsourcing.png"
 import Garuda from "../assets/image/garuda.png"
 import Gopay from "../assets/image/gopay.png"
 import HROutsourcing from "../assets/image/HR_Outsourcing.png"
+import HeroSection from "@/components/HeroSection";
 import HirringServiceQuality from "../assets/image/hirringParther.png"
-import HirringSuveyor from "../assets/image/hirringParthersuveryor.png"
 import ITOutsourcing from "../assets/image/ITOutsourcing.png"
 import Image from "next/image";
 import KepercayaanDika from "../assets/image/KepercayaanDika.png"
@@ -27,6 +27,7 @@ import OperatingOutsourcing from "../assets/image/Operating_Outsourcing.png"
 import PetaDika from "../assets/image/petaDika.png"
 import PinDika from "../assets/image/CoverageDika.png"
 import SalesOutsourcing from "../assets/image/Sales_Outsourcing.png"
+import SectionHero from "../assets/image/HeroSection.png"
 // Our Client
 import Shoope from "../assets/image/shoppe.png"
 import canon from "../assets/image/canon.png"
@@ -165,51 +166,12 @@ const clientThree = [
     }
   ];
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-[#1AA4E3] text-white min-h-screen overflow-hidden">
-        <div className="container mx-auto px-4 py-20 relative">
-         <div className="flex flex-col md:flex-row md:space-x-8 items-center">
-
-            {/* Right Column */}
-            <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Tim Profesional</h3>
-                    <p className="text-white/90">
-                      Didukung oleh tim berpengalaman yang siap memberikan solusi terbaik untuk kebutuhan bisnis Anda.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Keamanan Terjamin</h3>
-                    <p className="text-white/90">
-                      Sistem manajemen yang terintegrasi dengan standar keamanan tinggi untuk melindungi data Anda.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Left Column */}
-            <div className="flex-1 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda
-              </h1>
-              <p className="text-xl mb-8">
-                Bersama DIKA, Raih Keunggulan Bisnis dengan Solusi Sumber Daya yang Inovatif.
-              </p>
-              <Button className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-bold group">
-                DISKUSIKAN SEKARANG
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main>
+     {/* Hero Section */}
+      <HeroSection title={"Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda"} description={"Bersama DIKA, Raih Keunggukan Bisnis dengan Solusi Sumber Daya yang Inovatif."} image={SectionHero}/>
        {/* Services Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className=" mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             DIKA Siap Melayani Berbagai Kebutuhan Perusahaan Anda
           </h2>
@@ -573,7 +535,6 @@ const clientThree = [
           </div>
         </div>
       </section>
-
     </main>
   );
 }
