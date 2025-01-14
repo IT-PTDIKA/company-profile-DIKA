@@ -1,5 +1,7 @@
 import 'swiper/css'
 import 'swiper/css/pagination'
+import "swiper/css/navigation";
+import "swiper/css/scrollbar";
 import "./globals.css";
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable}`}
       >
         <Footer>
           <LayoutProvider>

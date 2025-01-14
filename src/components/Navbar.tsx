@@ -8,21 +8,22 @@ import Image from "next/image"
 import Link from "next/link"
 import LogoDika from "../assets/image/Dika.png"
 import type { MenuProps } from 'antd';
+import { useRouter } from 'next/navigation'
 
 interface IProps {
   children: React.ReactNode  
 }
 export default function Navbar(props: IProps) {
     const {children} = props
-    const [arrow, setArrow] = React.useState(true)
+    const [arrow, setArrow] = useState(true)
     const [arrowTentang, setArrowTentang] =useState(true)
+     const router = useRouter()
     const onClick: MenuProps['onClick'] = () => {
         setArrow(!arrow)
     };
     const onClickTentang: MenuProps['onClick'] = () => {
         setArrowTentang(!arrowTentang)
     }
-    console.log("arrow", arrow)
     const items:MenuProps['items'] = [
         {
             label: <span className="font-medium text-xl text-black">Outsorcing</span>,
@@ -65,13 +66,13 @@ export default function Navbar(props: IProps) {
                             menu={{items, onClick}}
                             trigger={['hover','click']}
                         >
-                            <Space onClick={() => setArrow(!arrow)}>
+                            <Space className="cursor-pointer" onClick={() => setArrow(!arrow)}>
                                 Layanan
                                 {arrow ? <DownOutlined /> : <UpOutlined />}
                             </Space>
                         </Dropdown>
                     </li>
-                    <li>Karir</li>
+                    <li onClick={()=> router.push("/karir")}>Karir</li>
                     <li>Blog</li>    
                     <li><Dropdown
                             menu={{items: tentang, onClick: onClickTentang}}

@@ -1,5 +1,6 @@
-import { DoubleRightOutlined, FacebookOutlined, InstagramOutlined, LinkOutlined, LinkedinOutlined, RightOutlined, TikTokOutlined } from '@ant-design/icons';
+import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, RightOutlined, TikTokOutlined } from '@ant-design/icons';
 
+import Link from 'next/link';
 import React from 'react'
 
 interface IProps {
@@ -10,7 +11,7 @@ export default function Footer(props: IProps) {
     return (
     <>
         {children}
-       <div className='bg-[#0C2543] h-auto pt-20 px-3 pb-10 mb:pb-0'>
+       <div className='bg-[#0C2543] h-auto pt-32 px-11 pb-10 mb:pb-0'>
             <div className='flex justify-between gap-16 flex-wrap'>
                 <div className='flex basis-full md:basis-1/2 gap-0 md:gap-4 '>
                     <div className='basis-full md:basis-1/4 px-4 md:px-0'>
@@ -43,13 +44,22 @@ export default function Footer(props: IProps) {
             </div>
             <div className='mt-4  w-auto'>
                 <p className='font-bold text-xl text-white text-center'>Follow Up on:</p>
-                <div className='flex gap-3 justify-center mt-2'>
-                    <FacebookOutlined className='text-xl font-medium bg-white rounded-xl p-3'/>
-                    <TikTokOutlined className='text-xl font-medium bg-white rounded-xl p-3'/>
-                    <InstagramOutlined className='text-lg font-medium bg-white rounded-xl p-3'/>
-                    <LinkedinOutlined className='text-lg font-medium bg-white rounded-xl p-3'/>
-                </div>
-                    <p className='text-white text-center mt-2'>&copy; 2024 All Rights Reseverd PT. DIKA</p>
+                    <div className='flex gap-3 justify-center mt-2'>
+                        <Link href="https://www.facebook.com/ptdika.ptdika" target='_blank'>
+                            <FacebookOutlined className='text-xl font-medium bg-white rounded-3xl p-3'/>
+                        </Link>
+                        <Link href={"https://www.tiktok.com/@ptdika_"} target='_blank'>
+                            <TikTokOutlined className='text-xl font-medium bg-white rounded-3xl p-3'/>
+                        </Link>
+                        <Link href="https://www.instagram.com/ptdikaofficial" target='_blank'>
+                            <InstagramOutlined className='text-lg font-medium bg-white rounded-3xl p-3'/>
+                        </Link>
+                        <Link href="https://www.instagram.com/ptdikaofficial" target='_blank'>
+                            <LinkedinOutlined className='text-lg font-medium bg-white rounded-3xl p-3'/>
+                        </Link>
+                        
+                    </div>
+                <p className='text-white text-center mt-2'>&copy; 2024 All Rights Reseverd PT. DIKA</p>
             </div>
         </div>
     </>

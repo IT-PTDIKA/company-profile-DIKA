@@ -1,30 +1,33 @@
 import { Button } from "antd";
 import { CheckOutlined } from "@ant-design/icons";
+import HeroFooter from "./HeroFooter";
 import Image from 'next/image'
 import React from 'react'
 
 interface IProps {
     dataOutsourcing: any[]
+    className?: string
 }
-export default function CardLayanan({dataOutsourcing}: IProps) {
+export default function CardLayanan({dataOutsourcing, className}: IProps) {
   return (
-    <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-16">
+    <main>
+        <section className="py-20">
+        <div className=" mx-auto w-[85%]">
+            <div className="grid grid-cols-1">
                 {dataOutsourcing?.map((service: any, index: any) => (
                     <div
                         key={index}
                         className={`flex flex-col items-center justify-between ${
-                            index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'
+                            index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
                         }`}
                     >
-                        <div className="bg-gradient-to-tr from-[#FFFFFF] to-[#1AA4E3] rounded-lg w-full md:w-1/3 h-auto mb-8 md:mb-0">
+                        <div className={`${className} rounded-lg w-full md:w-1/3 h-auto mb-8 md:mb-0`}>
                             <Image
                                 src={service.image}
                                 alt={service.title}
-                                className="rounded-lg object-contain"
-                                width={300}
-                                height={300}
+                                className=" object-contain"
+                                width={400}
+                                height={400}
                             />
                         </div>
                         <div className="w-full md:w-1/2 h-auto">
@@ -61,6 +64,12 @@ export default function CardLayanan({dataOutsourcing}: IProps) {
                 </Button>
             </div>
         </div>
-    </section>
+        </section>
+        <section className="h-[300px] relative">
+            <div className="mx-auto ">
+                <HeroFooter />
+            </div>
+        </section>
+    </main>
   )
 }
