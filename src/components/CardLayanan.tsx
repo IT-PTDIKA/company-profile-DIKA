@@ -12,13 +12,13 @@ export default function CardLayanan({dataOutsourcing, className}: IProps) {
   return (
     <main>
         <section className="py-20">
-        <div className=" mx-auto w-[85%]">
+        <div className=" mx-auto w-[85%] ">
             <div className="grid grid-cols-1">
                 {dataOutsourcing?.map((service: any, index: any) => (
                     <div
                         key={index}
-                        className={`flex flex-col items-center justify-between ${
-                            index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+                        className={` pb-7 flex flex-col items-center justify-between ${
+                            index % 2 === 0 ? 'md:flex-row-reverse ' : 'md:flex-row '
                         }`}
                     >
                         <div className={`${className} rounded-lg w-full md:w-1/3 h-auto mb-8 md:mb-0`}>
@@ -31,10 +31,10 @@ export default function CardLayanan({dataOutsourcing, className}: IProps) {
                             />
                         </div>
                         <div className="w-full md:w-1/2 h-auto">
-                            <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">
                                 {service.title}
                             </h2>
-                            <p className="text-black mb-6 text-center md:text-left">
+                            <p className="text-black mb-6 text-left text-lg">
                                 {service.description}
                             </p>
                             <div
@@ -47,7 +47,7 @@ export default function CardLayanan({dataOutsourcing, className}: IProps) {
                                 {service?.jobsTitle?.map((subService: any, idx: number) => (
                                     <div key={idx} className="flex items-center space-x-2">
                                         <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
-                                        <span className="text-black font-bold">{subService}</span>
+                                        <span className="text-black font-bold text-lg">{subService}</span>
                                     </div>
                                 ))}
                             </div>

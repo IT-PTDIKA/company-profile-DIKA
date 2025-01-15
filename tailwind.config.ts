@@ -13,6 +13,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        grotesk: ["Neue Haas Grotesk Display Pro", 'sans-serif'],
+      },
     },
   },
   plugins: [],

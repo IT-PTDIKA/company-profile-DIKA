@@ -6,11 +6,9 @@ import Blogger from "@/assets/image/blogger.png"
 import CardBlog from "@/components/CardBlog"
 import HeroFooter from "@/components/HeroFooter"
 import HeroSection from '@/components/HeroSection'
-import Image from "next/image"
 import React from 'react'
 import { SearchOutlined } from '@ant-design/icons'
 import TentangKami from "../../../assets/image/informasiperusahaan.png"
-import { title } from "process"
 
 interface IProps {
   options: any[]
@@ -72,11 +70,11 @@ export default function BlogComponent(props: IProps) {
   return (
     <main>
       <HeroSection title={"Jelajahi Berbagai Informasi Outsourcing, dari Manfaat Bisnis Hingga Tren Terkini"} heading="" description={""} image={TentangKami}/>
-      <section className="min-h-screen bg-gray-100 py-6 px-11">
+      <section className="min-h-screen py-6 px-11">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
           <div className="w-full md:w-1/4 space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="rounded-lg shadow">
               <div className="space-y-6">
                 <Input
                   prefix={<SearchOutlined />}

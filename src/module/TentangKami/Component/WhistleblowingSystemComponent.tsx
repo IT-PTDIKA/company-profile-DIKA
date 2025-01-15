@@ -31,17 +31,17 @@ export default function WhistleblowingSystemComponent() {
       </section>
       <section className='w-full mb-10'>
         <h1 className='px-11 font-bold text-[#0C2543] text-2xl'>Alur WBS PT. DIKA</h1>
-       <Image src={whistleblowingsystem} alt={"whistleblowingsystem"} className="object-contain w-auto h-auto bg-green-700" width={0} height={0}/>
+        <Image src={whistleblowingsystem} alt={"whistleblowingsystem"} className="object-contain w-screen h-auto bg-green-700" width={0} height={0}/>
       </section>
       <section className='px-11 w-full mb-10'>
         <h1 className='font-bold text-[#0C2543] text-2xl'>Pelaporan WBS</h1>
         <p className='text-lg text-[#0C2543] font-normal'>Pelaporan dapat mengisi form <Link href={"bit.ly/WBSDIKA"} replace className='text-font-bold text-[#0C2543] text-lg underline' target='_blank'>bit.ly/WBSDIKA</Link> dan menghubungi via email <Link href={"mailto:wbs@ptdika.com"} className='text-[#0C2543] text-lg font-bold underline' replace target='_blank'>wbs@ptdika.com</Link> atau via whatsapp <Link href={"https://wa.me/6282210954900"} className='text-[#0C2543] text-lg font-bold underline' replace target='_blank'>082210954900</Link> (chat only).</p>
       </section>
-      <section className="h-[300px] relative">
+      {/* <section className="h-[300px] relative">
         <div className="mx-auto ">
             <HeroFooter />
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }

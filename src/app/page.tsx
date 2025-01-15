@@ -18,6 +18,7 @@ import HROutsourcing from "../assets/image/HR_Outsourcing.png"
 import HeroFooter from "@/components/HeroFooter";
 import HeroSection from "@/components/HeroSection";
 import HirringServiceQuality from "../assets/image/hirringParther.png"
+import HomePage from "../assets/image/headerhomepage.png"
 import ITOutsourcing from "../assets/image/ITOutsourcing.png"
 import Image from "next/image";
 import KepercayaanDika from "../assets/image/KepercayaanDika.png"
@@ -41,6 +42,7 @@ import ruangguru from "../assets/image/ruangguru.png"
 import sayurBox from "../assets/image/Sayur_Box.png"
 import schneider from "../assets/image/Schneider.png"
 import tiketcom from "../assets/image/tiketcom.png"
+import {useRouter} from "next/navigation"
 
 export default function Home() {
 const logos = [
@@ -140,11 +142,18 @@ const clientThree = [
       image: BUMN,
       quote: 'I was impressed by the company services, not lorem ipsum is simply free text of used. Neque porro est qui dolorem ipsum quia.'
     }
-  ];
+  ];  
+  const router = useRouter();
+  const scrollBottom = () =>{
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
   return (
     <main>
      {/* Hero Section */}
-      <HeroSection title={"Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda"} description={"Bersama DIKA, Raih Keunggukan Bisnis dengan Solusi Sumber Daya yang Inovatif."} image={SectionHero}/>
+      <HeroSection title={"Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda"} description={"Bersama DIKA, Raih Keunggukan Bisnis dengan Solusi Sumber Daya yang Inovatif."} image={HomePage} buttonText={true}/>
        {/* Services Section */}
       <section className="py-8 bg-white">
         <div className="px-6 w-full ">
@@ -302,21 +311,21 @@ const clientThree = [
                 <div className="w-1/2">
                   <div className="flex items-center">
                     <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
-                    <span className="text-xl md:text-2xl text-white">Profesional</span>
+                    <span className="text-lg md:text-2xl text-white">Profesional</span>
                   </div>
                   <div className="flex items-center">
                     <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
-                    <span className="text-xl md:text-2xl text-white">Finansial Kuat</span>
+                    <span className="text-lg md:text-2xl text-white">Finansial Kuat</span>
                   </div>
                 </div>
                 <div className="w-1/2">
                   <div className="flex items-center">
                     <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
-                    <span className="text-xl md:text-2xl text-white">Kinerja Baik</span>
+                    <span className="text-lg md:text-2xl text-white">Kinerja Baik</span>
                   </div>
                   <div className="flex items-center">
                     <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
-                    <span className="text-xl md:text-2xl text-white">Jangkauan Luas</span>
+                    <span className="text-lg md:text-2xl text-white">Jangkauan Luas</span>
                   </div>
                 </div>
               </div>
@@ -350,7 +359,7 @@ const clientThree = [
             Dipercaya Klien di Berbagai Industri
           </h2>
           <div className="text-center">
-            <Button type="default" className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium">Lihat Lebih Banyak <ArrowRightOutlined className="w-5 h-5" /></Button>
+            <Button type="default" className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium" onClick={scrollBottom}>Lihat Lebih Banyak <ArrowRightOutlined className="w-5 h-5" /></Button>
           </div>
           <Swiper
             className="w-full h-[100px] flex items-center justify-center px-4 hover:cursor-pointer"
@@ -502,7 +511,7 @@ const clientThree = [
             </Swiper>
 
             {/* Custom Scrollbar */}
-            <div className="absolute bottom-2 right-32 w-[60%] md:w-[90%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-1">
+            <div className="absolute bottom-2 right-20 md:right-32 w-[80%] md:w-[90%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-1">
               <div className="swiper-scrollbar-drag bg-[#818891] h-2 rounded-lg w-[90%]"></div>
             </div>
 
@@ -522,12 +531,13 @@ const clientThree = [
         <div className="px-11">
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start gap-4">
-            <div className="w-full lg:w-1/3">
-              <h1 className="text-xl md:text-3xl font-bold text-gray-900 leading-snug">
-                Lowongan Pekerjaan <br /> Terbaru
+            <div className="w-full md:w-1/3">
+              <h1 className="text-lg md:text-3xl font-bold text-gray-900 leading-snug">
+                Lowongan Pekerjaan Terbaru
               </h1>
               <Button
                 type="default"
+                onClick={()=>router.push("/karir")}
                 className="mt-6 bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-6 py-5 rounded-md font-medium flex items-center gap-2 w-full md:w-auto"
               >
                 Lihat Lebih Banyak <ArrowRightOutlined className="w-5 h-5" />
@@ -564,20 +574,20 @@ const clientThree = [
                         <Image
                           src={HirringServiceQuality}
                           alt="Hiring Service"
-                          width={280}
-                          height={180}
-                          className="object-cover w-full h-full"
+                          width={0}
+                          height={0}
+                          className="object-cover w-full h-auto"
                         />
                       </div>
                       {/* Card Content */}
-                      <div className="p-4">
+                      <div className="p-3 pt-14 md:p-4">
                         {/* Date */}
-                        <div className="inline-block bg-blue-100 text-blue-500 px-3 py-1 rounded-full text-sm mb-4">
+                        <div className="inline-block bg-blue-100 text-blue-500 md:px-3 px-3 py-1 rounded-lg text-sm mb-4">
                           16 Jun 2024
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-gray-500 text-sm font-medium mb-1">
+                        <h3 className="text-gray-500 text-sm font-medium">
                           LOWONGAN PEKERJAAN
                         </h3>
                         <h2 className="text-blue-900 text-xl font-bold mb-4">
@@ -596,8 +606,9 @@ const clientThree = [
 
                         {/* Action Link */}
                         <Link
-                          href="#"
-                          className="inline-block text-blue-500 hover:text-blue-600 font-semibold text-sm"
+                          replace
+                          href="/karir"
+                          className="inline-block text-blue-500 hover:text-blue-600 font-semibold text-sm underline underline-offset-8 decoration-yellow-500 text-right w-full"
                         >
                           SELENGKAPNYA
                         </Link>
@@ -607,10 +618,10 @@ const clientThree = [
                 ))}
               </Swiper>
               {/* Custom Scrollbar */}
-              <div className="absolute bottom-3 right-10 w-[60%] md:w-[92%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-2">
+              <div className="absolute bottom-2 md:bottom-3 right-10 w-[75%] md:w-[92%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-2">
                 <div className="swiper-scrollbar-drag bg-[#818891] h-2 rounded-lg w-[80%]"></div>
               </div>
-              <div className="hidden md:flex md:justify-between">
+              <div className="flex justify-between pt-3 md:pt-0">
                 <div className="swiper-button-prev-custom">
                   <ArrowLeftOutlined className="py-2 px-2  bg-black text-white rounded-2xl" />
                 </div>

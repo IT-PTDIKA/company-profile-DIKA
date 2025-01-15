@@ -11,38 +11,42 @@ export default function Footer(props: IProps) {
     return (
     <>
         {children}
-       <div className='bg-[#0C2543] h-auto pt-32 px-11 pb-10 mb:pb-0'>
-            <div className='flex justify-between gap-16 flex-wrap'>
-                <div className='flex basis-full md:basis-1/2 gap-0 md:gap-4 '>
-                    <div className='basis-full md:basis-1/4 px-4 md:px-0'>
+       <div className='bg-[#0C2543] h-screen pt-32 px-11 pb-10 mb:pb-0'>
+            <div className='flex justify-start md:justify-between gap-0 md:gap-16 flex-wrap '>
+                <div className='flex basis-full md:basis-1/2 gap-0 md:gap-4  md:justify-between'>
+                    <div className='w-[60%] md:basis-full md:px-0'>
                         <h2 className='text-white font-bold mb-2'>Beranda</h2>
                         <h2 className='text-white font-bold mb-2'>Layanan</h2>
                         <ul className='list-none text-white'>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Outsourcing</span></li>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Teknologi</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Outsourcing</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Teknologi</span></li>
                         </ul>
                     </div>
-                    <div className='basis-full md:basis-1/4 px-4 md:px-0'>
+                    <div className='w-full md:basis-full px-0'>
                         <h2 className='text-white font-bold mb-2'>Karir</h2>
                         <h2 className='text-white font-bold mb-2'>Blog</h2>
                         <h2 className='text-white font-bold mb-2'>Tentang Kami</h2>
                         <ul className='list-none text-white'>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Informasi Perusahaan</span></li>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Clients</span></li>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Anti Fraud</span></li>
-                            <li><RightOutlined className='font-bold text-sm md:text-lg mb-2'/><span>Whistleblowing System</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Informasi Perusahaan</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Clients</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Anti Fraud</span></li>
+                            <li><RightOutlined className='font-bold text-sm mb-2 pr-1'/><span>Whistleblowing System</span></li>
                         </ul>
                     </div>
                 </div>
-                <div className='w-full md:w-1/4 -mt-5 md:mt-0 '>
-                    <h2 className='text-white font-bold'>Head Office</h2>
-                    <p className='text-white'>Jl. D.Tonando No.4 Rt:011 Rw:06, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</p>
-                    <h2 className='text-white font-bold mt-3'>Hubungi Kami</h2>
-                    <p className='text-white'>(021) 5020-2121</p>
-                    <p className='text-white'>Halo Dika: +62 811-8886-325</p>
+                <div className='flex w-full md:w-1/4  md:mt-0  flex-wrap flex-row pt-5 md:pt-0'>
+                    <div className='w-full  h-auto'>
+                        <h2 className='text-white font-bold'>Head Office</h2>
+                        <p className='text-white'>Jl. D.Tonando No.4 Rt:011 Rw:06, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</p>
+                    </div>
+                    <div className='w-full  h-auto'>
+                        <h2 className='text-white font-bold mt-3'>Hubungi Kami</h2>
+                        <p className='text-white'>(021) 5020-2121</p>
+                        <p className='text-white'>Halo Dika: +62 811-8886-325</p>
+                    </div>
                 </div>
             </div>
-            <div className='mt-4  w-auto'>
+            <div className='pt-4  w-auto'>
                 <p className='font-bold text-xl text-white text-center'>Follow Up on:</p>
                     <div className='flex gap-3 justify-center mt-2'>
                         <Link href="https://www.facebook.com/ptdika.ptdika" target='_blank'>

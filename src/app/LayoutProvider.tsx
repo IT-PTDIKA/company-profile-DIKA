@@ -28,7 +28,7 @@ export function LayoutProvider({
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 w-full z-50 bg-[#1AA4E3] 
+      <nav className={`fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(27,165,227)] 
       `}>
         <div className="px-11">
           <div className="flex items-center justify-between h-20 ">
@@ -100,7 +100,7 @@ export function LayoutProvider({
                 >
                   <div className="py-1">
                     <span onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
-                      Profil Perusahaan
+                      Informasi Perusahaan
                     </span>
                     <span onClick={()=> router.push("/clients")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients
@@ -170,7 +170,7 @@ export function LayoutProvider({
                 </span>
                 <div className={`pl-4 ${activeDropdown === 'mobile-tentang' ? 'block' : 'hidden'}`}>
                    <span onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
-                      Profil Perusahaan
+                      Informasi Perusahaan
                     </span>
                     <span onClick={()=> router.push("/clients")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients

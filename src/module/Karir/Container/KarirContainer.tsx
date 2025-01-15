@@ -14,37 +14,37 @@ import ModalDetailKarirContainer from './ModalDetailKarirContainer'
 export default function KarirContainer() {
 const dataKarir = [
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Merhant Delivery & Survey",
         lokasi: "Kediri",
         gambar: KarirMerchantDeliverySurvey
     },
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Relationship Officer",
         lokasi: "Jakarta",
         gambar: KarirRelationShipOfficer
     },
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Agent Desk Collection Staff",
         lokasi: "Jakarta",
         gambar: KarirAgentDeskCollection
     },
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Admin Validasi",
         lokasi: "Jakarta",
         gambar: KarirAdminValidasi
     },
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Marketing",
         lokasi: "Jakarta",
         gambar: KarirMarketing
     },
     {
-        tangalKarir: "31 Desember 2024",
+        tangalKarir: "31 Des 2024",
         pekerjaan: "Telemarketing",
         lokasi: "Yogyakarta",
         gambar: Karirtelemarketing

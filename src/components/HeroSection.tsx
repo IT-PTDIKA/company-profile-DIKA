@@ -16,17 +16,17 @@ interface IProps {
 export default function HeroSection(props: IProps) {
     const {className, description, image, title, heading, searchKarir, buttonText} = props
     return (
-    <section className={`bg-[#1AA4E3] text-white overflow-hidden ${className} -z-50 h-screen flex items-end`}>
+    <section className={`bg-[rgb(27,165,227)] text-white overflow-hidden ${className} -z-50 h-screen flex items-end`}>
         <div className="px-11 w-full">
-            <div className="flex flex-col-reverse md:flex-row items-center md:space-x-8 justify-between">
+            <div className="flex flex-col-reverse md:flex-row md:space-x-8 justify-between items-center">
                 {/* Left Column */}
-                <div className="flex-1 order-1 md:order-2  pt-20 text-center md:text-left">
-                    <Image src={image} alt="Hero Section" width={610} height={850} className="object-contain translate-y-6 ml-0 md:ml-[-80px]" />
+                <div className="flex-1 order-1 md:order-2  text-center mx-auto md:w-full  ">
+                    <Image src={image} alt="Hero Section" width={0} height={0} className="object-contain translate-y-8  mx-auto text-center" />
                 </div>
                 
                 {/* Left Column */}
-                <div className="flex-1 mb-8 md:mb-0 text-center md:text-left order-1 md:order-2 items-end  h-full">
-                    <h1 className={`${title ? "text-4xl md:text-5xl font-bold mb-6" : "hidden"}`}>
+                <div className="flex-1 md:mb-0 text-left order-1 md:order-2  ">
+                    <h1 className={`mt-40 pb-2 ${title ? " text-3xl md:text-5xl font-bold" : "hidden"}`}>
                         {title}
                     </h1>
                     {searchKarir && (
@@ -39,10 +39,10 @@ export default function HeroSection(props: IProps) {
                             />
                         </div>
                     )}
-                    <p className={`${heading ? "text-sm md:text-xl font-bold mb-6" : "hidden"}`}>
+                    <p className={`pb-2 ${heading ? "text-sm md:text-xl font-bold" : "hidden"}`}>
                         {heading}
                     </p>
-                    <p className="text-xl mb-8">
+                    <p className="text-sm md:text-xl pb-2">
                         {description}
                     </p>
                     {buttonText && (<Button className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-bold w-full md:w-auto">

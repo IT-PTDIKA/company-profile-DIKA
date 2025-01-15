@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('/fonts/NeueHaasGroteskDisplayBlack.ttf') format('ttf'),
+       url('/fonts/NeueHaasGroteskDisplayBlack.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('/fonts/NeueHaasGroteskDisplayBlack.ttf') format('ttf'),
+       url('/fonts/NeueHaasGroteskDisplayBold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: bold;
+}

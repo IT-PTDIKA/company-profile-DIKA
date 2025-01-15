@@ -23,7 +23,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
       <HeroSection title={"PT DIKA"} heading={"Danamas Insan Kreasi Andalan"} description={"PT Danamas Insan Kreasi Andalan atau DIKA merupakan anak perusahaan dari Dana Pensiun Karyawan BCA yang didirikan di Jakarta pada tanggal 2 Mei 2012 dengan fokus bisnis pada sales dan operation outsourcing. Dengan pengalaman yang luas dan performa yang terbukti selama bertahun-tahun, DIKA yakin bisa menjadi mitra bisnis yang andal bagi klien."} image={TentangKami}/>
       <section className='px-11 pt-11'>
         <h1 className='text-center text-3xl font-bold text-[#0C2543]'>Visi & Misi</h1>
-        <div className='flex justify-between flex-wrap items-start py-24'>
+        <div className='flex justify-between flex-wrap items-start py-14 md:py-24'>
             <div className='w-full md:w-1/3 '>
                <h1 className='font-bold text-[#0C2543] text-3xl text-center'>Visi</h1>
                <div className='my-3 w-full'>
@@ -44,7 +44,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
       <section >
         <div className=" mx-auto">
           <h1 className='text-3xl text-[#0C2543] font-bold w-full text-center'>Value Kami</h1>
-          <div className='flex justify-center flex-wrap items-center h-auto gap-x-32 py-2 md:py-16'>
+          <div className='flex justify-center flex-wrap items-center h-auto gap-x-32 py-10 md:py-16'>
               <div className='h-[350px] w-[350px] rounded-lg  bg-gradient-to-tr from-[#FFFFFF] to-[#1AA4E3]'>
                   <Image src={ValueKami} alt={"Value Kami"} className='object-contain mx-auto translate-x-5 -translate-y-7' width={300} height={300}/>
               </div>
@@ -70,8 +70,8 @@ export default function InformasiPerusahaanComponent(props: IProps) {
         </div>
       </section>
       <section className="">
-        <div className="px-11 flex justify-between items-center flex-wrap">
-          <div className="w-full md:w-1/3 flex items-center justify-center flex-col ">
+        <div className="px-11 flex justify-between items-center flex-wrap  gap-3">
+          <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center flex-col ">
               <div className="w-full bg-white">
                 <h1 className="font-bold text-black"><HomeOutlined className="text-black text-2xl text-left"/> Alamat Kantor</h1>
                 <div className="pl-7">
@@ -88,13 +88,13 @@ export default function InformasiPerusahaanComponent(props: IProps) {
                 </div>
               </div>
           </div>
-          <div className="w-auto md:w-auto  flex items-center justify-center ">
+          <div className="w-10/12 md:w-auto flex items-center md:justify-center justify-start">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.436409382738!2d106.80650307351729!3d-6.206023193781777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002244a0b1%3A0xffe4f7ca37e465f0!2sPT%20DIKA!5e0!3m2!1sid!2sid!4v1736504627553!5m2!1sid!2sid" className="w-[350px] md:w-[520px]" height="450"></iframe>
           </div>
         </div>
       </section>
-      <section className=" bg-gradient-to-l from-[#FFFFFF] to-[#1AA4E3] h-screen flex items-center justify-center">
-        <div className="mx-auto w-[500px] rounded-lg">
+      <section className=" bg-gradient-to-l from-[#FFFFFF] to-[#1AA4E3] md:h-screen flex items-center justify-center h-[650px] mt-4 md:mt-0">
+        <div className="mx-auto w-4/5 md:w-[500px] rounded-lg">
           <Form
             keepDirtyOnReinitialize
             onSubmit={handleSubmit}
