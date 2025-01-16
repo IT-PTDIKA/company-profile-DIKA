@@ -116,47 +116,7 @@ export default function ClientsContainer() {
         {
             image: sayurBox,
             alt: 'Sayur Box'    
-        },
-        {
-            image: schneider,
-            alt: 'Schneider'    
-        },
-        {
-            image: Zyrex,
-            alt: 'Zyrex Mandiri Buana'    
-        },
-        {
-            image: xl,
-            alt: 'XL Axita'    
-        },
-        {
-            image: colliers,
-            alt: 'Colliers'    
-        },
-        {
-            image: efishery,
-            alt: 'Efishery'    
-        },
-        {
-            image: grap,
-            alt: 'Grap'    
-        },
-        {
-            image: myRepublic,
-            alt: 'myRepublic'    
-        },
-        {
-            image: ruangguru,
-            alt: 'Ruang Guru'    
-        },
-        {
-            image: sayurBox,
-            alt: 'Sayur Box'    
-        },
-        {
-            image: schneider,
-            alt: 'Schneider'    
-        },
+        }
     ]
   return (
     <ClientsComponent dataClients={clients}/>

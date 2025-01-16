@@ -12,12 +12,12 @@ export default function ClientsComponent(props:IProps) {
   return (
     <main>
         <HeroSection title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus interdum interdum.'} description={""} image={InformasiPerusahaan}/>
-        <section className='py-16 bg-white'>
+        <section className='py-16 bg-white px-14'>
             <div className='flex basis-full items-center flex-wrap justify-between mx-3 gap-16 flex-row'>
                 {dataClients?.map((item:any, index: number)=>{
                     return (
                         <div key={index}>
-                            <Image src={item.image} alt={item.alt} width={70} height={70} className='object-contain' />
+                            <Image src={item.image} alt={item.alt} width={190} height={190} className='object-cover' />
                         </div>
                         
                     )

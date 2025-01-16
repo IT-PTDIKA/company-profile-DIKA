@@ -23,20 +23,20 @@ export default function InformasiPerusahaanComponent(props: IProps) {
       <HeroSection title={"PT DIKA"} heading={"Danamas Insan Kreasi Andalan"} description={"PT Danamas Insan Kreasi Andalan atau DIKA merupakan anak perusahaan dari Dana Pensiun Karyawan BCA yang didirikan di Jakarta pada tanggal 2 Mei 2012 dengan fokus bisnis pada sales dan operation outsourcing. Dengan pengalaman yang luas dan performa yang terbukti selama bertahun-tahun, DIKA yakin bisa menjadi mitra bisnis yang andal bagi klien."} image={TentangKami}/>
       <section className='px-11 pt-11'>
         <h1 className='text-center text-3xl font-bold text-[#0C2543]'>Visi & Misi</h1>
-        <div className='flex justify-between flex-wrap items-start py-14 md:py-24'>
-            <div className='w-full md:w-1/3 '>
+        <div className='flex justify-around flex-wrap items-start py-14 md:py-24'>
+            <div className='w-full md:w-1/3'>
                <h1 className='font-bold text-[#0C2543] text-3xl text-center'>Visi</h1>
                <div className='my-3 w-full'>
                 <Image src={VisiDika} alt={"Visi Dika"} className='object-contain mx-auto' width={200} height={200}/>
                </div>
-               <p className='text-[#0C2543] text-lg text-left'>Menjadi One Stop Outsourcing Solutions yang andal dan terpercaya bagi mitra untuk mengembangkan bisnisnya.</p>
+               <p className='text-[#0C2543] text-lg text-center'>Menjadi One Stop Outsourcing Solutions yang andal dan terpercaya bagi mitra untuk mengembangkan bisnisnya.</p>
             </div>
             <div className='w-full md:w-1/3 '>
                <h1 className='font-bold text-[#0C2543] text-3xl text-center'>Misi</h1>
                <div className='my-3 w-full'>
                 <Image src={MisiDika} alt={"Misi Dika"} className='object-contain mx-auto' width={200} height={200}/>
                </div>
-               <p className='text-[#0C2543] text-lg text-left'>Mengembangkan sumber daya manusia untuk mencapai performa terbaik dan memberikan solusi terpadu bagi klien dalam mencapai tujuan perusahaan.</p>
+               <p className='text-[#0C2543] text-lg text-center'>Mengembangkan sumber daya manusia untuk mencapai performa terbaik dan memberikan solusi terpadu bagi klien dalam mencapai tujuan perusahaan.</p>
             </div>
         </div>
         
@@ -69,7 +69,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
           </div>
         </div>
       </section>
-      <section className="">
+      <section className="my-8">
         <div className="px-11 flex justify-between items-center flex-wrap  gap-3">
           <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center flex-col ">
               <div className="w-full bg-white">
@@ -93,7 +93,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
           </div>
         </div>
       </section>
-      <section className=" bg-gradient-to-l from-[#FFFFFF] to-[#1AA4E3] md:h-screen flex items-center justify-center h-[650px] mt-4 md:mt-0">
+      <section className=" bg-gradient-to-l from-[#FFFFFF] to-[#1AA4E3] md:h-auto md:py-8 py-0 flex items-center justify-center h-[650px] md:mt-0">
         <div className="mx-auto w-4/5 md:w-[500px] rounded-lg">
           <Form
             keepDirtyOnReinitialize

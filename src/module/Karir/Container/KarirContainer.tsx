@@ -13,37 +13,43 @@ import ModalDetailKarirContainer from './ModalDetailKarirContainer'
 
 export default function KarirContainer() {
 const dataKarir = [
-    {
+    {   
+        kode_lowongan: "D1K4FNKM85",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Merhant Delivery & Survey",
         lokasi: "Kediri",
         gambar: KarirMerchantDeliverySurvey
     },
     {
+        kode_lowongan: "D1K4P4R30F",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Relationship Officer",
         lokasi: "Jakarta",
         gambar: KarirRelationShipOfficer
     },
-    {
+    {   
+        kode_lowongan: "D1K4854DC5",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Agent Desk Collection Staff",
         lokasi: "Jakarta",
         gambar: KarirAgentDeskCollection
     },
     {
+        kode_lowongan: "D1K4VAP4DV4",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Admin Validasi",
         lokasi: "Jakarta",
         gambar: KarirAdminValidasi
     },
     {
+        kode_lowongan: "D1K4PJSM6",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Marketing",
         lokasi: "Jakarta",
         gambar: KarirMarketing
     },
     {
+        kode_lowongan: "D1K484RTMM",
         tangalKarir: "31 Des 2024",
         pekerjaan: "Telemarketing",
         lokasi: "Yogyakarta",
@@ -55,7 +61,6 @@ const dataKarir = [
     const handleCloseJobs = () =>{
         setOpenDetail(true)
     }
-    console.log("detailJobs", detailJobs)
     return (
     <>
         <KarirComponent dataKarir={dataKarir} selectedDetailJobs={setDetailJobs} handleOpenModaDetailJobs={()=>{

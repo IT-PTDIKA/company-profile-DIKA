@@ -11,10 +11,10 @@ export default function Footer(props: IProps) {
     return (
     <>
         {children}
-       <div className='bg-[#0C2543] h-screen pt-32 px-11 pb-10 mb:pb-0'>
-            <div className='flex justify-start md:justify-between gap-0 md:gap-16 flex-wrap '>
+       <div className='bg-[#0C2543] h-screen md:h-auto pt-32 px-11 md:px-14 pb-10 mb:pb-0'>
+            <div className='flex justify-start md:justify-between gap-0 md:gap-16 flex-wrap'>
                 <div className='flex basis-full md:basis-1/2 gap-0 md:gap-4  md:justify-between'>
-                    <div className='w-[60%] md:basis-full md:px-0'>
+                    <div className='w-[62%] md:basis-full md:px-0 '>
                         <h2 className='text-white font-bold mb-2'>Beranda</h2>
                         <h2 className='text-white font-bold mb-2'>Layanan</h2>
                         <ul className='list-none text-white'>
@@ -35,9 +35,9 @@ export default function Footer(props: IProps) {
                     </div>
                 </div>
                 <div className='flex w-full md:w-1/4  md:mt-0  flex-wrap flex-row pt-5 md:pt-0'>
-                    <div className='w-full  h-auto'>
+                    <div className='w-auto  h-auto text-justify'>
                         <h2 className='text-white font-bold'>Head Office</h2>
-                        <p className='text-white'>Jl. D.Tonando No.4 Rt:011 Rw:06, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</p>
+                        <span className='text-white'>Jl. D.Tonando No.4 Rt:011 Rw:06, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</span>
                     </div>
                     <div className='w-full  h-auto'>
                         <h2 className='text-white font-bold mt-3'>Hubungi Kami</h2>

@@ -87,7 +87,7 @@ export default function DetailBlogComponent() {
               </div>
           </div>
           <div className="text-center pt-4">
-            <Button className="bg-[#0C2543] text-white font-bold py-2 px-3 mt-3 w-1/2 md:w-2/12 text-sm md:text-lg" onClick={()=> router.back()}>Artikel Lainnya</Button>
+            <Button className="bg-[#0C2543] text-white font-bold py-2 px-3 mt-3 w-1/2 md:w-2/12 text-sm md:text-lg" onClick={()=> router.push("/blog")}>Artikel Lainnya</Button>
           </div>
       </section>
     </main>

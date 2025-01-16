@@ -15,18 +15,18 @@ interface IProps {
 }
 export default function HeroSection(props: IProps) {
     const {className, description, image, title, heading, searchKarir, buttonText} = props
+    
     return (
     <section className={`bg-[rgb(27,165,227)] text-white overflow-hidden ${className} -z-50 h-screen flex items-end`}>
         <div className="px-11 w-full">
             <div className="flex flex-col-reverse md:flex-row md:space-x-8 justify-between items-center">
                 {/* Left Column */}
-                <div className="flex-1 order-1 md:order-2  text-center mx-auto md:w-full  ">
-                    <Image src={image} alt="Hero Section" width={0} height={0} className="object-contain translate-y-8  mx-auto text-center" />
+                <div className="flex-1 order-1 md:order-2  text-center mx-auto md:w-full ">
+                    <Image src={image} alt="Hero Section" width={0} height={0} className="object-contain translate-x-0 h-auto md:translate-y-16  w-full md:h-[620px]  mx-auto text-center bg-transparent" />
                 </div>
-                
                 {/* Left Column */}
-                <div className="flex-1 md:mb-0 text-left order-1 md:order-2  ">
-                    <h1 className={`mt-40 pb-2 ${title ? " text-3xl md:text-5xl font-bold" : "hidden"}`}>
+                <div className="flex-1 md:mb-0 text-center md:text-left order-1 md:order-2 ">
+                    <h1 className={`pb-2 ${title ? " text-3xl md:text-5xl font-bold" : "hidden"}`}>
                         {title}
                     </h1>
                     {searchKarir && (

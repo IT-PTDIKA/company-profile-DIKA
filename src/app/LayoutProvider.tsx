@@ -4,9 +4,9 @@ import { CloseOutlined, DownOutlined, MenuOutlined } from "@ant-design/icons"
 import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
-import Link from "next/link";
 import LogoDika from "../assets/image/Dika.png"
 import { useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 
 export function LayoutProvider({
   children,
@@ -17,6 +17,8 @@ export function LayoutProvider({
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter()
+ const searchParams = useSearchParams();
+  console.log("searchParams",searchParams)
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -47,7 +49,8 @@ export function LayoutProvider({
             </div>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-1">
-              <span onClick={()=>router.push("/")}  className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/")}  className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                 Beranda
               </span>
               <div className="relative group">
@@ -76,10 +79,10 @@ export function LayoutProvider({
                   </div>
                 </div>
               </div>
-              <span onClick={()=>router.push("/karir")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/karir")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                 Karir
               </span>
-              <span onClick={()=>router.push("/blog")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/blog")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                 Blog
               </span>
               <div className="relative group">
@@ -105,7 +108,7 @@ export function LayoutProvider({
                     <span onClick={()=> router.push("/clients")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients
                     </span>
-                    <span  onClick={()=> router.push("/antifraud")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    <span onClick={()=> router.push("/antifraud")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Anti Fraud
                     </span>
                     <span onClick={()=> router.push("/whistleblowingsystem")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
@@ -134,11 +137,12 @@ export function LayoutProvider({
           {/* Mobile Menu */}
           <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-r from-sky-400 to-sky-500">
-              <span onClick={()=> router.push("/")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Beranda
               </span>
               <div>
-                <span
+                <span 
                   onClick={() => setActiveDropdown(activeDropdown === 'mobile-layanan' ? null : 'mobile-layanan')}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-md text-white hover:bg-sky-600"
                 >
@@ -154,10 +158,10 @@ export function LayoutProvider({
                   </span>
                 </div>
               </div>
-              <span onClick={()=> router.push("/karir")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/karir")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Karir
               </span>
-              <span onClick={()=> router.push("/blog")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+              <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/blog")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Blog
               </span> 
               <div>
