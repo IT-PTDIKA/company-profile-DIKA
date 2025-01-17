@@ -33,10 +33,10 @@ export function LayoutProvider({
       <nav className={`fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(27,165,227)] 
       `}>
         <div className="px-11">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center">
-              <span onClick={()=>router.push("/")}  className="flex items-center cursor-pointer">
-                <div className="relative w-32 h-12 ml-2">
+          <div className="flex justify-between h-20 items-center">
+            <div className="h-auto pb-0">
+              <span onClick={()=>router.push("/")} className="flex items-center cursor-pointer">
+                <div className="relative w-32 ml-2">
                   <Image
                     src={LogoDika}
                     alt="DIKA Logo"
@@ -121,7 +121,7 @@ export function LayoutProvider({
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button
+              <span
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-sky-100 focus:outline-none cursor-pointer"
               >
@@ -130,7 +130,7 @@ export function LayoutProvider({
                 ) : (
                   <MenuOutlined className="h-6 w-6" />
                 )}
-              </button>
+              </span>
             </div>
           </div>
 

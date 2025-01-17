@@ -54,8 +54,8 @@ export default function HeroSection(props: IProps) {
                         DISKUSIKAN SEKARANG
                     </Button>)}
                     <div className='relative'>
-                        <Image src={WhatsAppDika} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed top-3/4 right-0 z-50 cursor-pointer md:hidden block" width={100} height={100} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
-                        <Image src={WhatsAppDikaDesktop} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed top-3/4 right-0 z-50 cursor-pointer md:block hidden" width={250} height={250} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
+                        <Image src={WhatsAppDika} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed bottom-11 right-10 z-50 cursor-pointer md:hidden block" width={100} height={100} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
+                        <Image src={WhatsAppDikaDesktop} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed bottom-11 right-10 z-50 cursor-pointer md:block hidden" width={250} height={250} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function Footer(props: IProps) {
     return (
     <>
         {children}
-       <div className='bg-[#0C2543] h-screen md:h-auto pt-32 px-11 md:px-14 pb-10 mb:pb-0'>
+       <div className='bg-[#0C2543] h-screen md:h-auto pt-32 px-11 md:px-14 mb:pb-0'>
             <div className='flex justify-start md:justify-between gap-0 md:gap-16 flex-wrap'>
                 <div className='flex basis-full md:basis-1/2 gap-0 md:gap-4  md:justify-between'>
                     <div className='w-[62%] md:basis-full md:px-0 '>
@@ -46,7 +46,7 @@ export default function Footer(props: IProps) {
                     </div>
                 </div>
             </div>
-            <div className='pt-4  w-auto'>
+            <div className='pt-8  w-auto'>
                 <p className='font-bold text-xl text-white text-center'>Follow Up on:</p>
                     <div className='flex gap-3 justify-center mt-2'>
                         <Link href="https://www.facebook.com/ptdika.ptdika" target='_blank'>
