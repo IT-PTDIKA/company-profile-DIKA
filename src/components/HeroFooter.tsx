@@ -1,9 +1,12 @@
 'use client';
+
 import React, {useState} from 'react';
+
 import { Button } from 'antd';
 import HeroImage from "../assets/image/heroFooter.png"
 import Image from 'next/image';
 import ModalFormHubungiKamiContainer from '@/module/Beranda/Container/ModalFormHubungiKamiContainer';
+
 interface HeroProps {
   title?: string;
   description?: string;
@@ -28,9 +31,9 @@ export default function HeroFooter({
   }
   return (
    <>
-    <div className={`md:w-4/5 w-full absolute  md:top-10 left-3 md:left-48 right-0 bottom-0 top-32 ${backgroundColor}  `}>
+    <div className={`md:w-4/5 w-full absolute  md:top-24 left-3 md:left-48 right-0 bottom-0 top-32 ${backgroundColor}  `}>
       <div className="flex items-end md:items-start justify-between p-5">
-          <div className='bg-[rgba(0,184,255,1)] flex rounded-lg md:h-[315px] w-[95%] p-6'>
+          <div className='bg-[rgba(0,184,255,1)] flex rounded-lg md:h-[240px] w-[95%] p-6'>
             <div className="text-white w-[50%] md:w-[70%] z-10 ">
               <h1 className="text-sm md:text-3xl font-bold leading-tight">
                 {title}
@@ -50,7 +53,7 @@ export default function HeroFooter({
               <Image
                 src={imageSrc}
                 alt={imageAlt}
-                className="object-cover md:translate-x-3 h-full md:h-auto md:-translate-y-16 w-auto"
+                className="object-cover translate-y-6 translate-x-6 md:translate-x-3 h-full md:h-[280px] md:-translate-y-16 w-auto"
                 width={0}
                 height={0}
               />

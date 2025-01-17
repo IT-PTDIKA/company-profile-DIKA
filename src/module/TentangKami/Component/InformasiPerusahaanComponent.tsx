@@ -4,6 +4,7 @@ import {Button, Form as FormANTD} from "antd"
 import {CheckOutlined, HomeOutlined, MailOutlined, PhoneOutlined} from "@ant-design/icons";
 import { Field, Form } from 'react-final-form'
 
+import HeroFooter from "@/components/HeroFooter";
 import HeroSection from '@/components/HeroSection'
 import Image from 'next/image'
 import Input from "@/components/Input";
@@ -186,6 +187,11 @@ export default function InformasiPerusahaanComponent(props: IProps) {
               )
             }}
           </Form>
+        </div>
+      </section>
+      <section className="h-[300px] relative">
+        <div className="mx-auto ">
+            <HeroFooter />
         </div>
       </section>
     </main>

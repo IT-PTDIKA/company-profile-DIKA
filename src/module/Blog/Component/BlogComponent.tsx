@@ -70,7 +70,7 @@ export default function BlogComponent(props: IProps) {
   return (
     <main>
       <HeroSection title={"Jelajahi Berbagai Informasi Outsourcing, dari Manfaat Bisnis Hingga Tren Terkini"} heading="" description={""} image={TentangKami}/>
-      <section className="min-h-screen py-5 md:py-0 px-14">
+      <section className="min-h-screen mt-0 md:mt-7 py-5 md:py-0 px-14">
         <div className="mx-auto flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
           <div className="w-full md:w-1/4 space-y-6">

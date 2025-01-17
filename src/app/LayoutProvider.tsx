@@ -33,7 +33,7 @@ export function LayoutProvider({
       <nav className={`fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(27,165,227)] 
       `}>
         <div className="px-11">
-          <div className="flex items-center justify-between h-20 ">
+          <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <span onClick={()=>router.push("/")}  className="flex items-center cursor-pointer">
                 <div className="relative w-32 h-12 ml-2">
@@ -51,7 +51,7 @@ export function LayoutProvider({
             <div className="hidden md:flex items-center space-x-1">
               <span onMouseEnter={() => setActiveDropdown('/')}
                   onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/")}  className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
-                Beranda
+                  Beranda
               </span>
               <div className="relative group">
                 <span
@@ -86,14 +86,14 @@ export function LayoutProvider({
                 Blog
               </span>
               <div className="relative group">
-                <button 
+                <span 
                   className="px-4 py-2 flex items-center text-white hover:text-sky-100"
-                  onMouseEnter={() => setActiveDropdown('tentang')}
+                   onMouseEnter={() => setActiveDropdown('tentang')}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   Tentang Kami
                   <DownOutlined className="ml-1 h-4 w-4" />
-                </button>
+                </span>
                 <div 
                   className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gradient-to-r from-sky-400 to-sky-500 ring-1 ring-black ring-opacity-5 transition-all duration-200 ${
                     activeDropdown === 'tentang' ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -143,17 +143,20 @@ export function LayoutProvider({
               </span>
               <div>
                 <span 
-                  onClick={() => setActiveDropdown(activeDropdown === 'mobile-layanan' ? null : 'mobile-layanan')}
+                  onMouseEnter={() => setActiveDropdown('mobile-layanan')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={() => setActiveDropdown(activeDropdown === 'mobile-layanan' ? null : 'mobile-layanan')}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-md text-white hover:bg-sky-600"
                 >
                   Layanan
                   <DownOutlined className={`ml-1 h-4 w-4 transform transition-transform ${activeDropdown === 'mobile-layanan' ? 'rotate-180' : ''}`} />
                 </span>
                 <div className={`pl-4 ${activeDropdown === 'mobile-layanan' ? 'block' : 'hidden'}`}>
-                  <span onClick={()=> router.push("/outsourcing")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+                  <span onMouseEnter={() => setActiveDropdown('/outsourcing')}
+                  onMouseLeave={() => setActiveDropdown(null)}  onClick={()=> router.push("/outsourcing")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                     Outsourcing
                   </span>
-                  <span onClick={()=> router.push("/teknologi")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+                  <span onMouseEnter={() => setActiveDropdown('/teknologi')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/teknologi")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                     Teknologi
                   </span>
                 </div>
@@ -166,23 +169,29 @@ export function LayoutProvider({
               </span> 
               <div>
                 <span 
-                  onClick={() => setActiveDropdown(activeDropdown === 'mobile-tentang' ? null : 'mobile-tentang')}
+                  onMouseEnter={() => setActiveDropdown('tentang')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={() => setActiveDropdown(activeDropdown === 'mobile-tentang' ? null : 'mobile-tentang')}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer"
                 >
                   Tentang Kami
-                  <DownOutlined className={`ml-1 h-4 w-4 transform transition-transform ${activeDropdown === 'mobile-tentang' ? 'rotate-180' : ''}`} />
+                  <DownOutlined className={`ml-1 h-4 w-4 transform transition-transform ${activeDropdown === 'mobile-tentang' ? 'rotate-180' : ''}`} onMouseEnter={() => setActiveDropdown('mobile-tentang')}
+                  onMouseLeave={() => setActiveDropdown(null)} />
                 </span>
                 <div className={`pl-4 ${activeDropdown === 'mobile-tentang' ? 'block' : 'hidden'}`}>
-                   <span onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                   <span onMouseEnter={() => setActiveDropdown('/informasiperusahaan')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Informasi Perusahaan
                     </span>
-                    <span onClick={()=> router.push("/clients")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    <span onMouseEnter={() => setActiveDropdown('/clients')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/clients")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients
                     </span>
-                    <span onClick={()=> router.push("/antifraud")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    <span onMouseEnter={() => setActiveDropdown('/antifraud')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/antifraud")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Anti Fraud
                     </span>
-                    <span onClick={()=> router.push("/whistleblowingsystem")}   className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    <span onMouseEnter={() => setActiveDropdown('/whistleblowingsystem')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/whistleblowingsystem")}   className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Whistleblowing System
                     </span>
                 </div>

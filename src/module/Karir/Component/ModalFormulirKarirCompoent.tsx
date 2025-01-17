@@ -1,21 +1,43 @@
 import React from 'react'
 import { Field, Form } from 'react-final-form'
 import Input from "@/components/Input";
-import {Button, Form as FormANTD} from "antd"
+import {Button, Form as FormANTD, Result} from "antd"
 import Modal from '@/components/Modal'
+import {ClipLoader} from "react-spinners"
 interface IProps {
   handleSubmit: (_vals:any) => void
   onClose: () => void
   initialValues: any
+  statusResult: boolean;
+  loading: boolean;
 }
 export default function ModalFormulirKarirCompoent(props:IProps) {
-  const {handleSubmit, onClose, initialValues} = props
+  const {handleSubmit, onClose, initialValues, statusResult, loading} = props
 
   return (
     <main>
-      <Modal open onCancel={onClose} title="Lengkapi formulir dibawah" width={500} footer={null}>
+      <Modal open onCancel={onClose} title={`${!loading && statusResult ? "" : "Lengkapi formulir dibawah"}`} width={500} footer={null}>
       <div className="mx-auto w-full rounded-lg">
-          <Form
+          {loading && (
+            <div className='flex justify-center w-full overflow-y-hidden'>
+              <ClipLoader color='#007CCE' loading={loading} size={80} aria-label='Loading Spinner' data-testid="loader" className='mx-auto border-solid border-[#0C2543] border overflow-y-hidden'/>
+            </div>
+          )}
+          {!loading && statusResult && (
+              <>
+               <div className='w-full'>
+                  <h1 className='text-[#0C2543] font-bold text-center md:text-2xl text-xl'>Terima Kasih</h1>
+                  <p className='text-[#0C2543] text-center font-normal'>Data anda telah terkirim, tim kami akan menghubungi Anda kembali.</p>
+               </div>
+              <Result status={"success"} className=' text-[#005E9C]' title="" subTitle="" extra={[
+                <Button type="default" size='large' className='bg-[#0C2543] text-[#FFF] text-xl' key={"1"} onClick={onClose}>
+                    Kembali
+                </Button>
+              ]}/>
+              </>
+          )}
+          {!loading && !statusResult && (
+            <Form
             keepDirtyOnReinitialize
             onSubmit={handleSubmit}
             initialValues={initialValues}
@@ -95,8 +117,7 @@ export default function ModalFormulirKarirCompoent(props:IProps) {
                       <Button
                         htmlType="submit"
                         onMouseEnter={() => false}
-                        disabled={invalid}
-                        className=" mx-auto text-white bg-[#8F9FB2] w-1/3"
+                        className=" mx-auto text-white bg-[#0C2543] w-1/3"
                       >
                         kirim
                       </Button>
@@ -106,6 +127,7 @@ export default function ModalFormulirKarirCompoent(props:IProps) {
               )
             }}
           </Form>
+          )}
         </div>
       </Modal>
     </main>

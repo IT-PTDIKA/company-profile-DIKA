@@ -16,7 +16,9 @@ const {onClose, selectedDetailJobs, handleOpenFormKarir} = props
           <Image alt='Jobs Detail' className=" object-contain rounded-lg" width={0} height={0} src={selectedDetailJobs?.gambar}/>
 
           <div className="mt-3 text-center">
-            <Button size="large" type="default" className="bg-[#0C2543] text-white font-bold text-center w-1/2  py-2" onClick={handleOpenFormKarir}>Lamar Sekarang</Button>
+            <Button size="large" type="default" className="bg-[#0C2543] text-white font-bold text-center w-1/2  py-2" onClick={()=>{
+              handleOpenFormKarir()
+            }}>Lamar Sekarang</Button>
           </div>
       </section>
     </Modal>

@@ -29,7 +29,6 @@ import OperatingOutsourcing from "../../../assets/image/Operating_Outsourcing.pn
 import PetaDika from "../../../assets/image/petaDika.png"
 import PinDika from "../../../assets/image/CoverageDika.png"
 import SalesOutsourcing from "../../../assets/image/Sales_Outsourcing.png"
-// Our Client
 import Shoope from "../../../assets/image/shoppe.png"
 import canon from "../../../assets/image/canon.png"
 import chubb from "../../../assets/image/chubb.png"
@@ -42,6 +41,20 @@ import sayurBox from "../../../assets/image/Sayur_Box.png"
 import schneider from "../../../assets/image/Schneider.png"
 import tiketcom from "../../../assets/image/tiketcom.png"
 import {useRouter} from "next/navigation"
+
+// Our Client
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default function BerandaComponent() {
 const logos = [
@@ -354,7 +367,7 @@ const clientThree = [
       </section>
       <section className="py-16 bg-white">
         <div className="w-full">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-3xl font-bold text-center text-gray-900 mb-8">
             Dipercaya Klien di Berbagai Industri
           </h2>
           <div className="text-center">
@@ -452,7 +465,7 @@ const clientThree = [
       </section>
       <section className="bg-white">
         <div className="mx-auto px-11">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 pb-4 md:pb-12">
+          <h2 className="text-3xl md:text-3xl font-bold text-center text-gray-900 pb-4 md:pb-12">
             Yang Mereka Katakan Tentang DIKA
           </h2>
           <div className="relative ">
@@ -526,12 +539,12 @@ const clientThree = [
           </div>
         </div>
       </section>
-      <section className=" bg-white">
+      <section className=" bg-white pt-12">
         <div className="px-11">
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start gap-4">
             <div className="w-full md:w-1/3">
-              <h1 className="text-lg md:text-3xl font-bold text-gray-900 leading-snug">
+              <h1 className="text-xl md:text-3xl font-bold text-gray-900 leading-snug">
                 Lowongan Pekerjaan Terbaru
               </h1>
               <Button
@@ -617,7 +630,7 @@ const clientThree = [
                 ))}
               </Swiper>
               {/* Custom Scrollbar */}
-              <div className="absolute bottom-2 md:bottom-3 right-10 w-[75%] md:w-[92%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-2">
+              <div className="absolute bottom-3 md:bottom-3 right-10 w-[75%] md:w-[92%] h-2 bg-gray-300 rounded-lg swiper-scrollbar-2">
                 <div className="swiper-scrollbar-drag bg-[#818891] h-2 rounded-lg w-[80%]"></div>
               </div>
               <div className="flex justify-between pt-3 md:pt-0">

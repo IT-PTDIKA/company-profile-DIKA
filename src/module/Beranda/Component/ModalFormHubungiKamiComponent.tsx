@@ -4,7 +4,6 @@ import {Button, Form as FormANTD, Result} from "antd"
 import { Field, Form } from 'react-final-form'
 import Input from "@/components/Input";
 import {ClipLoader} from "react-spinners"
-import { CheckOutlined } from '@ant-design/icons';
 interface IProps {
   onClose: () => void
   handleSubmit: (_vals:any) => void
