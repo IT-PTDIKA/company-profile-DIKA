@@ -1,18 +1,24 @@
+"use client"
+
 import { Button } from "antd";
 import { CheckOutlined } from "@ant-design/icons";
 import HeroFooter from "./HeroFooter";
 import Image from 'next/image'
 import React from 'react'
+import { useRouter } from "next/navigation";
 
 interface IProps {
     dataOutsourcing: any[]
     className?: string
+    label?: string
 }
-export default function CardLayanan({dataOutsourcing, className}: IProps) {
+
+export default function CardLayanan({dataOutsourcing, className, label}: IProps) {
+    const router = useRouter()
   return (
     <main>
-        <section className="py-20">
-        <div className=" mx-auto w-[85%] ">
+        <section className="py-20 dark:bg-white">
+        <div className=" mx-auto w-[85%] dark:bg-white">
             <div className="grid grid-cols-1">
                 {dataOutsourcing?.map((service: any, index: any) => (
                     <div
@@ -59,13 +65,14 @@ export default function CardLayanan({dataOutsourcing, className}: IProps) {
                 <Button
                     type="default"
                     className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium group"
+                    onClick={() => label === "Teknologi" ?  router.push('/teknologi') : router.push('/outsourcing')}
                 >
-                    Lihat Dukungan Teknologi DIKA
+                    Lihat Dukungan {label} DIKA
                 </Button>
             </div>
         </div>
         </section>
-        <section className="h-[300px] relative">
+        <section className="h-[300px] relative dark:bg-white">
             <div className="mx-auto ">
                 <HeroFooter />
             </div>

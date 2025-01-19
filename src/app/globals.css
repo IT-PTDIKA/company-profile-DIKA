@@ -19,6 +19,9 @@ body {
   background: var(--background);
   font-family: 'Neue Haas Grotesk Display Pro', Arial, Helvetica, sans-serif;
   user-select: none;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 /* CSS untuk mengubah warna placeholder */
 .custom-placeholder input::placeholder {

@@ -165,7 +165,7 @@ const clientThree = [
   return (
     <main>
      {/* Hero Section */}
-      <HeroSection title={"Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda"} description={"Bersama DIKA, Raih Keunggukan Bisnis dengan Solusi Sumber Daya yang Inovatif."} image={HomePage} buttonText={true}/>
+      <HeroSection title={"Solusi Outsourcing Sesuai Kebutuhan Bisnis Anda"} description={"Bersama DIKA, Raih Keunggukan Bisnis dengan Solusi Sumber Daya yang Inovatif."} image={HomePage} buttonText={true} classNameFirstChild="py-24" classNameImageFirstChild="translate-y-0 md:-translate-y-10 "/>
        {/* Services Section */}
       <section className="py-8 bg-white">
         <div className="px-6 w-full ">
@@ -312,14 +312,14 @@ const clientThree = [
         </div>
       </section>
       <section className="bg-gradient-to-l from-[#1AA4E3] to-[#1AA4E3] text-white h-screen flex items-center">
-        <div className="mx-auto px-11 z-10 h-screen flex items-end">
-          <div className="flex flex-wrap items-center justify-between">
+        <div className="mx-auto px-11 z-10 h-screen">
+          <div className="flex flex-wrap items-center justify-between pt-32">
             {/* Heading and Left Content */}
             <div className="w-full md:w-1/2 md:mb-0">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
                 Bagaimana DIKA Memberikan Solusi yang Tepat untuk Anda?
               </h1>
-              <div className="flex justify-between  md:gap-0 pb-0 md:pb-8 flex-row md:flex-row">
+              <div className="flex justify-between  md:gap-0 pb-2 md:pb-8 flex-row md:flex-row">
                 <div className="w-1/2">
                   <div className="flex items-center pb-3 md:p-0">
                     <CheckOutlined className="mr-2 text-black px-1 py-1 rounded-xl bg-[#FFCC0C]" />
@@ -343,6 +343,7 @@ const clientThree = [
               </div>
               <Button
                 type="default"
+                onClick={()=>router.push("/outsourcing")}
                 className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium  w-full md:w-auto mt-6 md:mt-0"
               >
                 Pelajari lebih lanjut
@@ -351,7 +352,7 @@ const clientThree = [
             </div>
 
             {/* Right Content - Team Image */}
-            <div className="w-full md:w-1/2 flex justify-center items-end  h-full">
+            <div className="w-full md:w-1/2 pt-20">
               <div className="w-full">
                 <Image
                   src={KlienKami}
@@ -371,7 +372,7 @@ const clientThree = [
             Dipercaya Klien di Berbagai Industri
           </h2>
           <div className="text-center">
-            <Button type="default" className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium" onClick={scrollBottom}>Lihat Lebih Banyak <ArrowRightOutlined className="w-5 h-5" /></Button>
+            <Button type="default" className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-medium" onClick={()=> router.push("/clients")}>Lihat Lebih Banyak <ArrowRightOutlined className="w-5 h-5" /></Button>
           </div>
           <Swiper
             className="w-full h-[100px] flex items-center justify-center px-4 hover:cursor-pointer"
@@ -645,8 +646,8 @@ const clientThree = [
           </div>
         </div>
       </section>
-      <section className="h-[300px] relative">
-        <div className="mx-auto ">
+      <section className="h-[300px] relative dark:bg-white">
+        <div className="mx-auto">
             <HeroFooter />
         </div>
       </section>

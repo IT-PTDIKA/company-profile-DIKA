@@ -16,8 +16,8 @@ export default function CardBlog(props: IProps) {
     const router = useRouter()
   return (
     <>
-        <div className="bg-white p-2 rounded-lg shadow overflow-hidden cursor-pointer border-solid border-[#DADEE0] border-2" onClick={()=> router.push("/detailblog")}>
-            <div className="aspect-video relative">
+        <div className="bg-white p-2 rounded-lg shadow overflow-hidden cursor-pointer border-solid border-[#DADEE0] border-2 dark:bg-white" onClick={()=> router.push("/detailblog")}>
+            <div className="aspect-video relative dark:bg-white">
                 <Image
                     alt="Blog Post"
                     src={gambarBlog}

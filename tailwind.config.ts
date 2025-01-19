@@ -7,6 +7,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/module/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'media', // atau 'class' jika Anda ingin mengontrol secara manual dengan class
   theme: {
     extend: {
       colors: {

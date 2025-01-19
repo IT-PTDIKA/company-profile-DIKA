@@ -50,16 +50,16 @@ export default function Footer(props: IProps) {
                 <p className='font-bold text-xl text-white text-center'>Follow Up on:</p>
                     <div className='flex gap-3 justify-center mt-2'>
                         <Link href="https://www.facebook.com/ptdika.ptdika" target='_blank'>
-                            <FacebookOutlined className='text-xl font-medium bg-white rounded-3xl p-3'/>
+                            <FacebookOutlined className='text-xl font-medium bg-white rounded-3xl p-3 dark:bg-gray-800'/>
                         </Link>
                         <Link href={"https://www.tiktok.com/@ptdika_"} target='_blank'>
-                            <TikTokOutlined className='text-xl font-medium bg-white rounded-3xl p-3'/>
+                            <TikTokOutlined className='text-xl font-medium bg-white rounded-3xl p-3 dark:bg-gray-800'/>
                         </Link>
                         <Link href="https://www.instagram.com/ptdikaofficial" target='_blank'>
-                            <InstagramOutlined className='text-lg font-medium bg-white rounded-3xl p-3'/>
+                            <InstagramOutlined className='text-lg font-medium bg-white rounded-3xl p-3 dark:bg-gray-800'/>
                         </Link>
                         <Link href="https://www.instagram.com/ptdikaofficial" target='_blank'>
-                            <LinkedinOutlined className='text-lg font-medium bg-white rounded-3xl p-3'/>
+                            <LinkedinOutlined className='text-lg font-medium bg-white rounded-3xl p-3 dark:bg-gray-800'/>
                         </Link>
                         
                     </div>

@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className='w-screen mx-0 px-0 overflow-x-hidden'>
         <Footer>
           <LayoutProvider>
           {children}

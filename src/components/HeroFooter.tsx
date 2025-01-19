@@ -31,7 +31,7 @@ export default function HeroFooter({
   }
   return (
    <>
-    <div className={`md:w-4/5 w-full absolute  md:top-24 left-3 md:left-48 right-0 bottom-0 top-32 ${backgroundColor}  `}>
+    <div className={`md:w-4/5 w-full absolute  md:top-24 left-3 md:left-48 right-0 bottom-0 top-32 ${backgroundColor}  dark:bg-white`}>
       <div className="flex items-end md:items-start justify-between p-5">
           <div className='bg-[rgba(0,184,255,1)] flex rounded-lg md:h-[240px] w-[95%] p-6'>
             <div className="text-white w-[50%] md:w-[70%] z-10 ">

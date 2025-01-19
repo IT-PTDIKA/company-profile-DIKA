@@ -21,8 +21,8 @@ export default function InformasiPerusahaanComponent(props: IProps) {
   const {handleSubmit} = props
   return (
     <main>
-      <HeroSection title={"PT DIKA"} heading={"Danamas Insan Kreasi Andalan"} description={"PT Danamas Insan Kreasi Andalan atau DIKA merupakan anak perusahaan dari Dana Pensiun Karyawan BCA yang didirikan di Jakarta pada tanggal 2 Mei 2012 dengan fokus bisnis pada sales dan operation outsourcing. Dengan pengalaman yang luas dan performa yang terbukti selama bertahun-tahun, DIKA yakin bisa menjadi mitra bisnis yang andal bagi klien."} image={TentangKami}/>
-      <section className='px-11 pt-11'>
+      <HeroSection title={"PT DIKA"} heading={"Danamas Insan Kreasi Andalan"} description={"PT Danamas Insan Kreasi Andalan atau DIKA merupakan anak perusahaan dari Dana Pensiun Karyawan BCA yang didirikan di Jakarta pada tanggal 2 Mei 2012 dengan fokus bisnis pada sales dan operation outsourcing. Dengan pengalaman yang luas dan performa yang terbukti selama bertahun-tahun, DIKA yakin bisa menjadi mitra bisnis yang andal bagi klien."} image={TentangKami} classNameFirstChild="pt-20" classNameImageFirstChild={"translate-y-20 md:translate-y-9 md:h-auto"} />
+      <section className='px-11 pt-11 dark:bg-white'>
         <h1 className='text-center text-3xl font-bold text-[#0C2543]'>Visi & Misi</h1>
         <div className='flex justify-around flex-wrap items-start py-14 md:py-24'>
             <div className='w-full md:w-1/3'>
@@ -42,7 +42,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
         </div>
         
       </section>
-      <section >
+      <section className="dark:bg-white">
         <div className=" mx-auto">
           <h1 className='text-3xl text-[#0C2543] font-bold w-full text-center'>Value Kami</h1>
           <div className='flex justify-center flex-wrap items-center h-auto gap-x-32 py-10 md:py-16'>
@@ -70,21 +70,21 @@ export default function InformasiPerusahaanComponent(props: IProps) {
           </div>
         </div>
       </section>
-      <section className="my-8">
-        <div className="px-11 flex justify-between items-center flex-wrap  gap-3">
-          <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center flex-col ">
-              <div className="w-full bg-white">
+      <section className="py-8 dark:bg-white">
+        <div className="px-11 flex justify-between items-center flex-wrap  gap-3 dark:bg-white">
+          <div className="w-full md:w-1/3 flex items-center justify-start md:justify-center flex-col dark:bg-white">
+              <div className="w-full bg-white dark:bg-white">
                 <h1 className="font-bold text-black"><HomeOutlined className="text-black text-2xl text-left"/> Alamat Kantor</h1>
-                <div className="pl-7">
+                <div className="pl-7 dark:text-black">
                   <span>Jl. D. Tondano No.4, RT.11/RW.6, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat 10210</span>
                 </div>
                 <h1 className="font-bold text-black"><PhoneOutlined className="text-black text-2xl text-left"/> Nomor Telepon</h1>
-                <div className="pl-7">
+                <div className="pl-7 dark:text-black">
                   <span>(021) 5020-2121</span>
                   <span>Halo DIKA: +62 811-8886-325</span>
                 </div>
                 <h1 className="font-bold text-black"><MailOutlined className="text-black text-2xl"/> Email</h1>
-                <div className="pl-7">
+                <div className="pl-7 dark:text-black">
                   <span>halodika@ptdika.com</span>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
         </div>
       </section>
       <section className=" bg-gradient-to-l from-[#FFFFFF] to-[#1AA4E3] md:h-auto md:py-8 py-0 flex items-center justify-center h-[650px] md:mt-0">
-        <div className="mx-auto w-4/5 md:w-[500px] rounded-lg">
+        <div className="mx-auto w-4/5 md:w-[500px] rounded-lg dark:bg-white">
           <Form
             keepDirtyOnReinitialize
             onSubmit={handleSubmit}
@@ -176,8 +176,8 @@ export default function InformasiPerusahaanComponent(props: IProps) {
                       <Button
                         htmlType="submit"
                         onMouseEnter={() => false}
-                        disabled={invalid}
-                        className=" mx-auto text-white bg-[#8F9FB2] w-1/3"
+                        // disabled={invalid}
+                        className=" mx-auto text-white bg-[#0C2543] w-1/3"
                       >
                         kirim
                       </Button>
@@ -189,7 +189,7 @@ export default function InformasiPerusahaanComponent(props: IProps) {
           </Form>
         </div>
       </section>
-      <section className="h-[300px] relative">
+      <section className="h-[300px] relative dark:bg-white">
         <div className="mx-auto ">
             <HeroFooter />
         </div>

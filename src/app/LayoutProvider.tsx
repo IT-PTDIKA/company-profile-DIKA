@@ -4,6 +4,7 @@ import { CloseOutlined, DownOutlined, MenuOutlined } from "@ant-design/icons"
 import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link'
 import LogoDika from "../assets/image/Dika.png"
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
@@ -30,7 +31,7 @@ export function LayoutProvider({
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(27,165,227)] 
+      <nav className={`fixed top-0 w-screen z-50 bg-[rgb(27,165,227)] 
       `}>
         <div className="px-11">
           <div className="flex justify-between h-20 items-center">
@@ -49,19 +50,14 @@ export function LayoutProvider({
             </div>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-1">
-              <span onMouseEnter={() => setActiveDropdown('/')}
+              <Link href={"/"} replace>
+                <span onMouseEnter={() => setActiveDropdown('/')}
                   onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/")}  className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                   Beranda
-              </span>
-              <div className="relative group">
-                <span
-                  className="px-4 py-2 flex items-center text-white hover:text-sky-100 cursor-pointer"
-                  onMouseEnter={() => setActiveDropdown('layanan')}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  Layanan
-                  <DownOutlined className="ml-1 h-4 w-4" />
                 </span>
+              </Link>
+              <div className="relative group">
+               
                 <div 
                   className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gradient-to-r from-sky-400 to-sky-500 ring-1 ring-black ring-opacity-5 transition-all duration-200 ${
                     activeDropdown === 'layanan' ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -70,21 +66,29 @@ export function LayoutProvider({
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <div className="py-1">
-                    <span onClick={()=>router.push("/outsourcing")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                  <Link href={"/outsourcing"} replace>
+                     <span onClick={()=>router.push("/outsourcing")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Outsourcing
                     </span>
-                    <span onClick={()=>router.push("/teknologi")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                  </Link>
+                  <Link href={"/teknologi"} replace>
+                      <span onClick={()=>router.push("/teknologi")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Teknologi
                     </span>
+                  </Link>
                   </div>
                 </div>
               </div>
-              <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/karir")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
+              <Link href={"/karir"} replace>
+                <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/karir")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                 Karir
-              </span>
-              <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/blog")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
+                </span>
+              </Link>
+              <Link href={"/blog"} replace>
+                  <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=>router.push("/blog")} className="px-4 py-2 text-white hover:text-sky-100 cursor-pointer">
                 Blog
               </span>
+              </Link>
               <div className="relative group">
                 <span 
                   className="px-4 py-2 flex items-center text-white hover:text-sky-100"
@@ -102,18 +106,26 @@ export function LayoutProvider({
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <div className="py-1">
-                    <span onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    <Link href={"/informasiperusahaan"} replace>
+                      <span onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Informasi Perusahaan
-                    </span>
-                    <span onClick={()=> router.push("/clients")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                      </span>
+                    </Link>
+                    <Link href={"/clients"} replace>
+                      <span onClick={()=> router.push("/clients")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients
-                    </span>
-                    <span onClick={()=> router.push("/antifraud")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                      </span>
+                    </Link>
+                    <Link href={"/antifraud"} replace>
+                      <span onClick={()=> router.push("/antifraud")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Anti Fraud
-                    </span>
-                    <span onClick={()=> router.push("/whistleblowingsystem")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                      </span>
+                    </Link>
+                    <Link href={"/whistleblowingsystem"} replace>
+                       <span onClick={()=> router.push("/whistleblowingsystem")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Whistleblowing System
                     </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -137,10 +149,15 @@ export function LayoutProvider({
           {/* Mobile Menu */}
           <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-r from-sky-400 to-sky-500">
-              <span onMouseEnter={() => setActiveDropdown('/')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+            <Link href={"/"} replace>
+                <span onMouseEnter={() => setActiveDropdown('/')}
+                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=>{
+                     router.push("/")
+                     setIsOpen(!isOpen)
+                  }} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Beranda
               </span>
+            </Link>
               <div>
                 <span 
                   onMouseEnter={() => setActiveDropdown('mobile-layanan')}
@@ -151,22 +168,42 @@ export function LayoutProvider({
                   <DownOutlined className={`ml-1 h-4 w-4 transform transition-transform ${activeDropdown === 'mobile-layanan' ? 'rotate-180' : ''}`} />
                 </span>
                 <div className={`pl-4 ${activeDropdown === 'mobile-layanan' ? 'block' : 'hidden'}`}>
-                  <span onMouseEnter={() => setActiveDropdown('/outsourcing')}
-                  onMouseLeave={() => setActiveDropdown(null)}  onClick={()=> router.push("/outsourcing")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
-                    Outsourcing
-                  </span>
-                  <span onMouseEnter={() => setActiveDropdown('/teknologi')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/teknologi")}  className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
-                    Teknologi
-                  </span>
+                  <Link href={"/outsourcing"} replace>
+                    <span onMouseEnter={() => setActiveDropdown('/outsourcing')}
+                    onMouseLeave={() => setActiveDropdown(null)}  onClick={()=> {
+                      router.push("/outsourcing")
+                      setIsOpen(!isOpen)
+                    }} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+                      Outsourcing
+                    </span>
+                  </Link>
+                  <Link href={"/teknologi"} replace>
+                    <span onMouseEnter={() => setActiveDropdown('/teknologi')}
+                    onMouseLeave={() => setActiveDropdown(null)} onClick={()=>{
+                       router.push("/teknologi")
+                       setIsOpen(!isOpen)
+                    }} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+                      Teknologi
+                    </span>
+                  </Link>
                 </div>
               </div>
-              <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/karir")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+              <Link href={"/karir"} replace>
+                <span onMouseEnter={() => setActiveDropdown('/karir')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                router.push("/karir")
+                setIsOpen(!isOpen)
+                }} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Karir
-              </span>
-              <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/blog")} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
+                </span>
+              </Link>
+              <Link href={"/blog"} replace>
+                <span onMouseEnter={() => setActiveDropdown('/blog')} onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                  router.push("/blog")
+                  setIsOpen(!isOpen)
+                }} className="block px-3 py-2 rounded-md text-white hover:bg-sky-600 cursor-pointer">
                 Blog
               </span> 
+              </Link>
               <div>
                 <span 
                   onMouseEnter={() => setActiveDropdown('tentang')}
@@ -178,22 +215,42 @@ export function LayoutProvider({
                   onMouseLeave={() => setActiveDropdown(null)} />
                 </span>
                 <div className={`pl-4 ${activeDropdown === 'mobile-tentang' ? 'block' : 'hidden'}`}>
-                   <span onMouseEnter={() => setActiveDropdown('/informasiperusahaan')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/informasiperusahaan")} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                  <Link href={"/informasiperusahaan"} replace>
+                    <span onMouseEnter={() => setActiveDropdown('/informasiperusahaan')}
+                    onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                      router.push("/informasiperusahaan")
+                      setIsOpen(!isOpen)
+                    }} className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Informasi Perusahaan
                     </span>
+                  </Link>
+                  <Link href={"/clients"} replace>
                     <span onMouseEnter={() => setActiveDropdown('/clients')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/clients")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                      router.push("/clients")
+                      setIsOpen(!isOpen)
+                    }}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Clients
                     </span>
+                  </Link>
+                  <Link href={"/antifraud"} replace>
                     <span onMouseEnter={() => setActiveDropdown('/antifraud')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/antifraud")}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                      router.push("/antifraud")
+                      setIsOpen(!isOpen)
+                    }}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Anti Fraud
                     </span>
+                  </Link>
+                  <Link href={"/whistleblowingsystem"} replace>
                     <span onMouseEnter={() => setActiveDropdown('/whistleblowingsystem')}
-                  onMouseLeave={() => setActiveDropdown(null)} onClick={()=> router.push("/whistleblowingsystem")}   className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
+                    onMouseLeave={() => setActiveDropdown(null)} onClick={()=> {
+                      router.push("/whistleblowingsystem")
+                      setIsOpen(!isOpen)
+                    }}  className="block px-4 py-2 text-sm text-white hover:bg-sky-600 cursor-pointer">
                       Whistleblowing System
                     </span>
+                  </Link>
                 </div>
               </div>
             </div>

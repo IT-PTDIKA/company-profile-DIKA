@@ -7,7 +7,6 @@ import React from 'react'
 import { SearchOutlined } from '@ant-design/icons'
 import WhatsAppDika from "../assets/image/whatsApp.png"
 import WhatsAppDikaDesktop from "../assets/image/hallodikawhatsapp.png"
-import {useRouter} from "next/navigation"
 
 interface IProps {
     className?: string
@@ -17,21 +16,22 @@ interface IProps {
     image: string | any
     searchKarir?: true | any
     buttonText?: true | any
+    classNameFirstChild?: string
+    classNameImageFirstChild?: any | string
 }
 export default function HeroSection(props: IProps) {
-    const {className, description, image, title, heading, searchKarir, buttonText} = props
-    const router = useRouter()
+    const {className, description, image, title, heading, searchKarir, buttonText, classNameFirstChild, classNameImageFirstChild} = props
     return (
-    <section className={`bg-[rgb(27,165,227)] text-white overflow-hidden ${className} -z-50 h-screen flex items-end`}>
-        <div className="px-11 w-full">
-            <div className="flex flex-col-reverse md:flex-row md:space-x-8 justify-between items-center">
+    <section className={`bg-[rgb(27,165,227)] text-white overflow-hidden ${className} -z-50 h-screen flex items-end md:items-center`}>
+        <div className="px-11">
+            <div className="flex flex-col-reverse md:flex-row md:space-x-8 justify-between">
                 {/* Left Column */}
-                <div className="flex-1 order-1 md:order-2  text-center mx-auto md:w-full ">
-                    <Image src={image} alt="Hero Section" width={0} height={0} className="object-contain translate-x-0 h-auto md:translate-y-16  w-full md:h-[620px]  mx-auto text-center bg-transparent" />
+                <div className="flex-1 order-1 md:order-2  text-center mx-auto md:w-full h-[350px]">
+                    <Image src={image} alt="Hero Section" width={0} height={0} className={`object-contain translate-x-0  h-[350px]  w-full md:h-[620px]  mx-auto text-center bg-transparent ${classNameImageFirstChild}`} />
                 </div>
                 {/* Left Column */}
-                <div className="flex-1 md:mb-0 text-center md:text-left order-1 md:order-2 ">
-                    <h1 className={`pb-2 ${title ? " text-3xl md:text-5xl font-bold" : "hidden"}`}>
+                <div className={`flex-1 md:mb-0 text-left md:text-left order-1 md:order-2 ${classNameFirstChild}`}>
+                    <h1 className={` pb-2 ${title ? " text-3xl md:text-5xl font-bold" : "hidden"}`}>
                         {title}
                     </h1>
                     {searchKarir && (
@@ -53,10 +53,10 @@ export default function HeroSection(props: IProps) {
                     {buttonText && (<Button className="bg-gradient-to-r from-[#FFDB0C] via-[#FFCC0C] to-[#FFB90C] text-lg px-8 py-6 font-bold w-full md:w-auto">
                         DISKUSIKAN SEKARANG
                     </Button>)}
-                    <div className='relative'>
+                    {/* <div className='relative'>
                         <Image src={WhatsAppDika} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed bottom-11 right-10 z-50 cursor-pointer md:hidden block" width={100} height={100} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
                         <Image src={WhatsAppDikaDesktop} alt={"WhatsApp Dika"} className="object-fill bg-transparent fixed bottom-11 right-10 z-50 cursor-pointer md:block hidden" width={250} height={250} onClick={() => window.open("https://wa.me/628118886325","_blank")} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

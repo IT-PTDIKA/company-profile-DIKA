@@ -39,7 +39,7 @@ export default function DetailBlogComponent() {
   return (
     <main>
       <section className='px-11 py-3 bg-[#FFF]'>
-        <div onClick={() => router.push("/blog")} className="text-[#007CCE] pt-20 text-2xl cursor-pointer font-bold"><LeftOutlined className="text-2xl text-[#007CCE]  font-bold" /> Kembali</div>
+        <div onClick={() => router.push("/blog")} className="text-[#007CCE] pt-20 text-lg md:text-2xl cursor-pointer font-bold"><LeftOutlined className="text-lg md:text-2xl text-[#007CCE]  font-bold" /> Kembali</div>
         <div className=' w-full'></div>
           <h1 className='text-3xl font-bold text-[#0C2543]'>5 Alasan Bisnis Besar Mengandalkan Outsourcing</h1>
           <span className="text-[#747A82] text-sm">27 November 2024 <span className="text-[#747A82] text-sm">.</span>General</span>
@@ -66,7 +66,7 @@ export default function DetailBlogComponent() {
           <br />
           <p className="text-[#0C2543] text-left text-lg">Ingin tahu lebih banyak tentang bagaimana outsourcing dapat meningkatkan efisiensi bisnis Anda? Hubungi PT DIKA sekarang!</p>
           <div className="py-4 pt-12">
-            <h1 className="text-center font-bold text-2xl">Artikel Terkait</h1>
+            <h1 className="text-center font-bold text-2xl dark:text-black">Artikel Terkait</h1>
           </div>
           <div className="w-full">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">

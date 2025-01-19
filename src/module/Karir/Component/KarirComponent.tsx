@@ -28,7 +28,7 @@ export default function KarirComponent(props:IProps) {
     }
   return (
     <main>
-        <HeroSection title={"Temukan Pekerjaan Impian Kamu Sekarang Juga!"} description="" heading="" image={KarirDika} searchKarir={true}/>
+        <HeroSection title={"Temukan Pekerjaan Impian Kamu Sekarang Juga!"} description="" heading="" image={KarirDika} searchKarir={true} classNameFirstChild="py-36"  classNameImageFirstChild={"md:-translate-y-12 translate-y-4"}/>
         <section className='h-auto px-14 pt-5'>
             <div className='flex justify-between mb-4 flex-wrap'>
                 <h1 className='font-bold text-lg md:text-3xl lowercase tracking-widest pb-3'>Lowongan Pekerjaan Terbaru</h1>
@@ -103,7 +103,7 @@ export default function KarirComponent(props:IProps) {
             </div>
 
         </section>
-        <section className="h-[300px] relative">
+        <section className="h-[300px] relative dark:bg-white">
             <div className="mx-auto ">
                 <HeroFooter />
             </div>

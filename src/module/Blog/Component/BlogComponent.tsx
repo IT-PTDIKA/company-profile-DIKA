@@ -69,8 +69,8 @@ export default function BlogComponent(props: IProps) {
   ]
   return (
     <main>
-      <HeroSection title={"Jelajahi Berbagai Informasi Outsourcing, dari Manfaat Bisnis Hingga Tren Terkini"} heading="" description={""} image={TentangKami}/>
-      <section className="min-h-screen mt-0 md:mt-7 py-5 md:py-0 px-14">
+      <HeroSection title={"Jelajahi Berbagai Informasi Outsourcing, dari Manfaat Bisnis Hingga Tren Terkini"} heading="" description={""} image={TentangKami} classNameFirstChild="py-28"  classNameImageFirstChild={"md:-translate-y-5 translate-y-4"}/>
+      <section className="min-h-screen mt-0 md:mt-7 py-5 md:py-0 px-14 dark:bg-white">
         <div className="mx-auto flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
           <div className="w-full md:w-1/4 space-y-6">
@@ -109,7 +109,7 @@ export default function BlogComponent(props: IProps) {
 
           {/* Main Content */}
           <div className="w-full md:w-3/4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
               {blog.map((item:any, index:number) => (
                <div key={index}>
                  <CardBlog dateBlog={item?.dateBlog} titleBlog={item?.titleBlog} descriptionBlog={item?.descriptionBlog} gambarBlog={item?.gambarBlog} kategoriBlog={item?.kategoriBlog}/>
@@ -119,7 +119,7 @@ export default function BlogComponent(props: IProps) {
           </div>
         </div>
       </section>
-      <section className="h-[300px] relative">
+      <section className="h-[300px] relative dark:bg-white">
         <div className="mx-auto ">
             <HeroFooter />
         </div>
